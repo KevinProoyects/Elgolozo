@@ -1,0 +1,454 @@
+*
+	{
+		margin: 0;
+		padding: 0;
+		transition: all 1s;
+		box-sizing: border-box;
+	}
+
+body
+	{
+		background-color: rgb(255, 8, 8);
+	}
+
+main
+	{
+		width: 100%;
+		height: 100vh;
+		display: grid;
+		justify-content: center;
+		align-content: center;
+		background-image: url(../img/tramas/patron200x200blanco.png) ;
+		background-repeat: repeat;
+		background-size: 500px;
+		animation: bg-scrolling 20s infinite;
+		animation-timing-function: linear;
+	}
+
+@-webkit-keyframes bg-scrolling
+	{
+  		0% { background-position: 0 0; }
+  		100% { background-position: 500px 500px; }
+	}
+
+@-moz-keyframes bg-scrolling
+	{
+		0% { background-position: 0 0; }
+  		100% { background-position: 500px 500px; }	
+	}
+
+@-o-keyframes bg-scrolling
+	{
+  		0% { background-position: 0 0; }
+  		100% { background-position: 500px 500px; }
+	}
+
+@keyframes bg-scrolling,
+	{
+  		0% { background-position: 0 0; }
+  		100% { background-position: 500px 500px; }
+	}
+
+.Escena
+	{
+		width: 0px;
+		min-height: 510px;
+		overflow: hidden;
+		display: none;
+
+	}
+
+.mostrar
+	{
+		width: 340px;
+		display: block;
+	}
+
+/*Menu*/
+.contenido
+	{
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+.logo
+	{
+		width: 265px;
+	}
+
+.boton, .pausa, .desactivado
+	{
+		background-color: rgb(123, 255, 0);
+		max-width: 300px;
+		width: 100%;
+		height: 60px;
+		border-radius: 10px;
+		border: solid 5px rgb(123, 255, 0);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 10px 0;
+		box-shadow: 0 5px 0 0 rgb(123, 255, 0), 0 10px 10px 2px rgba(218, 255, 6, 0.3);
+		transition: all 0.25s ease;
+		color: white;
+		font-family: 'Rowdies', cursive;
+		cursor: pointer;
+	}
+
+
+.boton:hover, .pausa:hover, .boton.presionado, .pausea.presionado
+	{
+		box-shadow: 0 0 0 0 rgba(232, 93, 4, 0);
+		transform: translate(0, 5px);
+	}
+
+.pausa:hover, .pausa.presionado
+	{
+		transform: scale(0.8)
+	}
+
+p
+	{
+		font-size: 2em;
+	}
+
+.instalar, .error404 
+	{
+		align-self: start;
+		display: inline-flex;
+		align-items: center;
+		overflow: hidden;
+		max-width: 125px;
+		background-color: white;
+		border-radius: 10px;
+		padding: 10px;
+		margin: 10px 20px;
+		max-width: 130px;
+		width: 100%;
+		cursor: pointer;
+	}
+
+.instalar img
+	{
+		width: 25px;
+		height: 25px;
+		margin-right: 10px;
+	}
+
+.instalar p, .error404 p
+	{
+		font-size: 1.2em;
+		font-family: sans-serif;
+	}
+
+.error404
+	{
+		justify-content: center;
+	}
+
+.instalar:hover, .instalar.presionado
+	{
+		transform: scale(0.8);
+	}
+
+.error404
+	{
+		max-width: 300px;
+	}
+
+.oculto
+	{
+		display: none;
+	}
+	
+.version
+	{
+		font-family: sans-serif;
+		font-size: 1em;
+		align-self:flex-end;
+		margin-right: 60px;
+		color: white;
+		margin-bottom: 5px;
+	}
+
+#Creditos .version
+	{
+		margin-right: 100px;
+	}	
+
+/*Juego*/
+
+.Jugador
+	{
+		display: grid;
+		grid-template-columns: 2fr 1fr 2fr 1fr 1fr;
+		grid-template-rows: 1fr;
+		height: 60px;
+		align-self: center;
+		justify-content: center;
+		font-family: 'Rowdies', cursive;
+		background-color: rgba(255,255,255,1);
+		border-radius: 10px;
+		margin-bottom: 10px;
+	}
+
+.Jugador > h3
+	{
+		align-self: center;
+		justify-self:center;
+	}
+
+.pausa
+	{
+		width: 40px;
+		height: 40px;
+		border: solid 3px rgb(123, 255, 0);
+		border-radius: 5px;
+		box-shadow: 0 3px 0 0 rgb(123, 255, 0), 0 5px 5px 2px rgba(123, 255, 0, 0.986);
+		margin: 0;
+	}
+
+.Nivel
+	{
+		width: 340px;
+		height: 510px;
+		display: grid;
+		grid-template-rows: repeat(6, 85px);
+		grid-template-columns: repeat(4,85px);
+		align-self: start;
+		background-image: url(../img/back1.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		border-radius: 10px;
+	}
+
+
+.factura
+	{
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+.modal
+	{
+		
+		position: absolute;
+		width:100vw;
+		height: 100vh;
+		background-color: rgba(0,0,0,0.2);
+		overflow: hidden;
+		display: none;
+		align-items: center;
+		justify-content: center;
+		z-index: 5;
+		font-family: 'Rowdies', cursive;
+		color: rgb(197, 0, 0);
+	}
+
+.modal > .contenedor
+	{
+		background-color: rgb(238, 238, 238);
+		width: 300px;
+		height: 300px;
+		border-radius: 10px;
+		align-items: center;
+		justify-content: center;
+		padding: 10px;
+		margin: auto;
+		box-shadow:0 15px 15px 5px rgba(0,0,0,0.1);
+		transition: all 0.25s ease;
+	}
+
+.modal > .contenedor > h3
+	{
+		color: black;
+		margin-bottom: 20px;
+	}
+
+#titulo-modal
+	{
+		color: rgb(0, 0, 0);
+		text-align: center;
+		margin-bottom: 10px;
+	}
+
+.revelar
+	{
+		opacity: 1;
+		display: flex;
+	}
+
+.contenedor > .boton
+	{
+		box-shadow: 0 5px 0 0 rgb(123, 255, 0), 0 10px 10px 2px rgba(0,0,0,0.1);
+		margin: 10px 0 20px 0;
+	}
+
+.contenedor > .boton:hover, .contenedor > .boton.presionado
+	{
+		box-shadow:0 0 0 0 rgba(232, 93, 4, 0), 0 0 0 0 rgba(0, 0, 0, 0);
+		transform: translate(0, 5px);
+	}
+
+.desactivado
+	{
+		display: none;
+	}
+
+.tapi
+	{
+		width: 100%;
+		height: 100%;
+		background-image: url(../img/contenedor.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+.fac1
+	{
+		background-image: url(../img/fac1.png);
+	}
+
+.fac2
+	{
+		background-image: url(../img/fac2.png);
+	}
+
+.fac3
+	{
+		background-image: url(../img/fac3.png);
+	}
+
+.fac4
+	{
+		background-image: url(../img/fac4.png);
+	}
+
+.fac5
+	{
+		background-image: url(../img/fac5.png);
+	}
+
+/*Creditos*/
+
+.creador
+	{
+		background-color: rgb(255, 255, 255);
+		border-radius: 20px;
+		padding: 20px;
+		max-width: 2000px;
+		width: 100%;
+		margin-bottom: 20px;
+		cursor: pointer;
+	}
+
+a.creador
+	{
+		text-decoration: none;
+		color:black;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		font-size: 1.2em;
+		font-family: sans-serif;
+	}
+
+.creador img
+	{
+		width: 25px;
+		height: 25px;
+		margin-right: 10px;
+	}
+
+.creador strong
+	{
+		margin-right: 5px;
+	}
+
+.creador:hover, .creador.presionado
+	{
+		transform: scale(1.08);
+		box-shadow:0 5px 5px 2px rgb(255, 230, 4);
+	}
+
+.logo-creditos
+	{
+		width: 180px;
+		margin-bottom: 10px;
+	}
+
+.text-creditos
+	{
+		font-family: sans-serif;
+		text-align: justify-all;
+		font-size: 1.2em;
+		display: block;
+		width: 100%;
+		padding: 10px 20px;
+	}
+
+a.Lin
+	{
+		text-decoration: none;
+		font-family: 'Rowdies', cursive;
+		font-size: 2em;
+	}
+
+/*Jugar*/
+
+.opcion
+	{
+		display: flex;
+		height: 120px;
+		width: 300px;
+		margin-bottom: 25px;
+		background-color: white;
+		border-radius: 15px;
+		padding: 15px;
+		justify-content: center;
+		align-items: center;
+	}
+
+.opcion-img
+	{
+		width: 40%;
+		padding: 5px;
+	}
+
+.opcion-img-2
+	{
+		width: 40%;
+		display: flex;
+		align-items: center;
+		padding: 5px;
+	}
+
+.opcion:hover, .opcion.presionado
+	{
+		transform: scale(0.9);
+		box-shadow:0 5px 5px 2px rgba(232, 93, 4, 0.5);
+	}
+
+.opcion-img-2 img
+	{
+		width: 40px;
+		margin-right: 10px;
+	}
+
+.opcion-img img
+	{
+		width: 82px;
+
+	}
+
+.opcion p
+	{
+		font-family: sans-serif;
+		text-align: center;
+		font-size: 1.1em;
+	}

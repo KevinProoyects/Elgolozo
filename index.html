@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>El Golozo</title>
+	<meta name="author" content="KevinProoyects">
+	<meta name="description" content="Juego hecho en HTML, CSS y Javascript ">
+	<meta name="keywords" content="Juego,Html,Css,Javascript">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<!--Nuevas meta etiquetas-->
+	<meta http-equiv="Content-Language" content="es"/>
+	<meta name="Distribution" content="global"/>
+	<meta name="Robots" content="all"/>
+	<!-- "Prompt" Google Font-->
+	<link href="https://fonts.googleapis.com/css?family=Prompt:300i,400,500,600&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">	
+	<link href="https://fonts.googleapis.com/css2?family=Rowdies&display=swap" rel="stylesheet">
+	<link rel="icon" href="img/iconos/ico32x32.png" type="image/png" sizes="32x32">
+	<meta name="theme-color" content="#080500">
+	<link rel="apple-touch-icon" href="img/iconos/ico192x192.png">
+	<meta name="apple-mobile-web-app-status-bar" content="#080500">
+	<!-- Enlace al manifest para hacer una PWA -->
+	<link rel="manifest" href="manifest.webmanifest">
+</head>
+<body onclick="EventHandler()">
+	<main>
+		<section class="modal">
+				<section class="contenedor">
+					<h2 id="titulo-modal"></h2>
+					<h3>Puntos: <strong id="puntos-modal"></strong></h3>
+					<h3>Vidas: <strong id="vidas-modal"></strong></h3>
+					<p class="boton Hov Pau" id="pausa-modal">&#9658</p>
+					<p class="boton Hov Pri">Inicio</p>
+				</section>
+		</section>
+		<article id="Menu" class="Escena mostrar">
+			<div class="contenido">
+				<picture class="logo">
+					  <source type="image/png" srcset="img/logo.png"> 
+					  <img alt="Logotipo Tapi Rosh" src="img/logo.png">
+				</picture>
+				
+				<p class="version"><strong>V.2</strong></p>
+				<p class="boton Hov Es3">Inicio</p>
+				<p class="boton Hov Es2">¿Como se juega?</p>
+				<p class="boton Hov Es1">Autor</p>
+				<div class="instalar Hov Ins oculto">
+					<img alt="Icono download" src="img/creditos/icon-down.png"><p>Instalar</p>
+				</div>
+			</div>
+		</article>
+		<article id="Creditos" class="Escena">
+			<div class="contenido">
+				<img alt="Logotipo El Golozo" class="logo-creditos" src="img/logo.png">
+				<p class="version"><strong>ver.2</strong></p>
+				<p class="text-creditos">Hecho por:</p>
+				<a class="creador Hov" href="https://github.com/KevinProoyects" target="_blank"><img alt="Icono Programador" src="img/creditos/icon-prog.png"><strong>Programador:</strong> KevinProoyects</a>
+				<a class="creador Hov" href="https://github.com/KevinProoyects"><img alt="Icono Arte" src="img/creditos/icon-art.png"><strong>Artista:</strong> KevinProoyects</a>
+				<p class="boton Hov Es0">Volver</p>
+			</div>
+		</article>
+		<article id="Como" class="Escena">
+			<div class="contenido">
+				<div class="opcion Hov">
+					<div class="opcion-img">
+						<img alt="Click en pantalla." src="img/jugar/mano.png">
+					</div>
+					<p>
+						
+					</p>
+				</div>
+				<div class="opcion Hov">
+					<div class="opcion-img-2">
+						<img alt="Click en pantalla." src="img/jugar/a.png">
+						<img alt="Click en pantalla." src="img/jugar/d.png">
+					</div>
+					<p>
+						
+					</p>
+				</div>
+				<div class="opcion Hov">
+					<div class="opcion-img-2">
+						<img alt="Click en pantalla." src="img/jugar/izq.png">
+						<img alt="Click en pantalla." src="img/jugar/der.png">
+					</div>
+					<p>
+						Teclas <strong>&#8592;</strong> y <strong>&#8594;</strong>.
+					</p>
+				</div>
+				<p class="boton Hov Es0">Volver</p>
+			</div>
+		</article>
+		<article id="Juego" class="Escena">
+			<section class="Jugador">
+				<h3>Puntos:</h3>
+				<h3 id="puntos">0</h3>
+				<h3>Vidas:</h3>
+				<h3 id="vidas">3</h3>
+				<h3 class="pausa Hov Pau">||</h3>
+			</section>
+			<section class="Nivel">
+			</section>
+		</article>
+	</main>
+	<script type="text/javascript" src="js/juego.js"></script>
+	<script type="text/javascript" src="js/escenas.js"></script>
+	<script type="text/javascript" src="js/touch.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
